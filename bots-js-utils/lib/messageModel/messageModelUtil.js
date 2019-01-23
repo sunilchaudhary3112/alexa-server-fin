@@ -47,7 +47,7 @@ function textMessageToText(resp) {
   var result = "";
   result = trailingPeriod(resp.text);
   if (resp.actions && resp.actions.length > 0) {
-    result = result + actionsToText(resp.actions, 'Puede elegir entre las siguientes opciones');
+    result = result + actionsToText(resp.actions, 'Puede elegir entre las siguientes opciones: ');
    // result = result + actionsToText(resp.actions, 'You can choose from the following options: ');
 
   }
@@ -105,7 +105,7 @@ function attachmentMessageToText(resp) {
   var result = "";
   if (resp.actions && resp.actions.length > 0) {
     //result = result + actionsToText(resp.actions, 'You can choose from the following options: ');
-    result = result + actionsToText(resp.actions, 'Puede elegir entre las siguientes opciones');
+    result = result + actionsToText(resp.actions, 'Puede elegir entre las siguientes opciones: ');
 
   }
   if (resp.globalActions && resp.globalActions.length > 0) {
